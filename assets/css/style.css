@@ -1,0 +1,926 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Theme default CSS	
+    02. Header CSS	
+    03. Slider CSS	
+    04. Store CSS	
+    05. About CSS	
+    06. Counter CSS	
+    07. Testimonial CSS	
+    08. Foooter CSS	
+	
+-----------------------------------------------------------------------------------*/
+/*
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Open sans', sans-serif;
+*/
+
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* 1. Theme default css */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #848b8a;
+    line-height: 2.7rem;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus,
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a,
+button {
+    color: inherit;
+    outline: none;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+    border: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    color: #000;
+    margin-top: 0px;
+    font-weight: 700;
+    line-height: 1;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.7rem;
+}
+
+h4 {
+    font-size: 2.2rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+h6 {
+    font-size: 1.6rem;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+    line-height: 2.7rem;
+    color: #000;
+}
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+/*--
+    - Background color
+-----------------------------------------*/
+
+.white-small-bg {
+    background: #f9f9f9;
+}
+
+.topbar-bg {
+    background-color: #1ABC9c;
+}
+
+.footer-bg {
+    background-color: #000;
+}
+
+/*--- color
+-----------------------------------------*/
+
+/* spacing margin and padding */
+.pt-100 {
+    padding-top: 100px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.p-15 {
+    padding: 15px !important;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.mb-45 {
+    margin-bottom: 45px;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pb-50 {
+    padding-bottom: 50px !important;
+}
+
+.pb-60 {
+    padding-bottom: 60px !important;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pr-90 {
+    padding-right: 90px;
+}
+
+.pr-30 {
+    padding-right: 30px;
+}
+
+/*button*/
+a.slider-btn {
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 1.1rem 1.9rem;
+    border: 2px solid #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.slider-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.about-btn {
+    padding: 7px 22px;
+    background: #02f4fc;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 8px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.about-btn::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #02f4fc;
+    z-index: -2;
+}
+
+.about-btn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #07cbaf;
+    z-index: -1;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.about-btn:hover {
+    color: #fff;
+}
+
+.about-btn:hover::before {
+    width: 100%;
+}
+
+/* scroll to top */
+
+#scroll a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    -webkit-box-shadow: 1px 2px 20px rgb(0 0 0 / 10%);
+    box-shadow: 1px 2px 20px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    color: #4c4c4c;
+    font-size: 1.6rem;
+    cursor: pointer !important;
+    z-index: 99;
+    -webkit-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    border-radius: 2px;
+}
+
+/*header sticky */
+
+.sticky {
+    background-color: #ffffff !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    padding: 0px 95px;
+    -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+    z-index: 999;
+    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+}
+
+
+/*===================================================================================*/
+/*  02. HEADER CSS START
+/*===================================================================================*/
+
+/*header topbar*/
+.topbar-area {
+    padding: 1.3rem 0 1.3rem 0;
+}
+
+.header-cta {
+    color: #fff;
+}
+
+.header-cta span i {
+    margin-right: .7rem;
+}
+
+.header-cta span:nth-child(1) {
+    margin-right: 5rem;
+}
+
+.header-cta span:nth-child(1)::after {
+    content: "";
+    width: 1.5px;
+    height: 1.7rem;
+    background: #f9f9f9;
+    position: absolute;
+    top: 0.4rem;
+    margin-left: 2.4rem;
+}
+
+.header-login {
+    float: right;
+    color: #fff;
+}
+
+.header-area {
+    background: #fff;
+    padding: 2.2rem 0;
+}
+
+/*header logo*/
+.logo img {
+    height: 3rem;
+}
+
+/*main menu*/
+.main-menu ul li a {
+    color: #020910;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+.main-menu ul li a:hover {
+    color: red;
+}
+
+/*header social*/
+.header-social {
+    float: right;
+}
+
+.header-social a {
+    font-size: 1.6rem;
+    margin-left: 1.7rem;
+    color: #020910;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.header-social a:hover {
+    color: red;
+}
+
+/*===================================================================================*/
+/*  03. SLIDER CSS START
+/*===================================================================================*/
+
+.slider-height {
+    min-height: 50rem;
+}
+
+.single-slider {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider-text h2 {
+    font-size: 4.6rem;
+    line-height: 1.2;
+    color: #f9f9f9;
+    margin-bottom: 1.5rem;
+}
+
+.slider-text p {
+    margin-bottom: 2.7rem;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.slider-active .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    background: rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 3rem;
+    z-index: 1;
+    color: #fff;
+}
+
+.slider-active button.slick-next.slick-arrow {
+    left: auto !important;
+    right: 5rem !important;
+}
+
+
+
+/*===================================================================================*/
+/*  04. STORE CSS START
+/*===================================================================================*/
+
+
+.store-img img {
+    max-width: 15rem;
+    height: 204px;
+}
+
+.title {
+    font-size: 1.9rem;
+    color: #0c0c0c;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.title:not(:last-child) {
+    margin-bottom: 0.5rem
+}
+
+p.subtitle {
+    color: #606060;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.product-display {
+    min-height: 360px;
+    min-width: 300px;
+    max-width: 320px;
+    position: relative;
+}
+
+.store-card {
+    border-radius: 1rem;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 15px 40px rgb(10 10 10 / 10%);
+    box-shadow: 2px 15px 40px rgb(10 10 10 / 10%);
+    color: #606060;
+    max-width: 100%;
+    position: relative;
+}
+
+.store-section .section-title h2 {
+    color: #17518c;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: #000;
+    font-weight: 500;
+}
+
+/*===================================================================================*/
+/*  05. ABOUT  CSS START
+/*===================================================================================*/
+
+.about-section .section-title h5 {
+    color: #02f4fc;
+}
+
+.about-section .section-title h2 {
+    color: #aeaeae;
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+.about-section .section-title h2 span {
+    color: #292929;
+    font-weight: 600;
+}
+
+.about-title {
+    color: #292929;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+}
+
+.about-content p {
+    color: #6a6a6a;
+    font-size: 1.5rem;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/*===================================================================================*/
+/*  06. COUNTER CSS START
+/*===================================================================================*/
+
+.counter-area {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.counter-overlay::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 105, 78, 0.9);
+}
+
+.counter-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.counter-icon a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 48px;
+}
+
+.counter-item h3 {
+    margin-bottom: 0;
+}
+
+.counter-item p {
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0;
+}
+
+.counter-item h3 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/*===================================================================================*/
+/*  07. TESTIMONIAL CSS START
+/*===================================================================================*/
+
+.testimonial-area .section-title h2 {
+    color: #282828;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-area .section-title h2::after {
+    content: "";
+    position: absolute;
+    background: #fcaf9e;
+    height: 3px;
+    width: 65px;
+    top: 4.3rem;
+    text-align: center;
+    margin-left: -15rem;
+}
+
+.testimonial-area .section-title p {
+    color: #939394;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.testimonial-item {
+    background: #fff;
+    padding: 3.5rem 2.5rem;
+  outline: none;
+}
+
+
+.testimonial-content .rating ul li a {
+    font-size: 1.5rem;
+    color: #f8a683;
+}
+
+.testimonial-content .rating ul li:last-child a {
+    color: #cdd0cf;
+}
+
+.testimonial-person img {
+    width: 10rem !important;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.testimonial-content h3 {
+    color: #4c4c4c;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.testimonial-content span {
+    margin-bottom: 1.4rem;
+    display: block;
+}
+
+.testimonial-content p {
+    color: #413a39;
+    font-size: 1.5rem;
+}
+
+/*TESTIMONIAL CAROUSEL CSS*/
+
+.testimonial-area .owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+    display: block !important;
+}
+
+.testimonial-area .owl-carousel .owl-item img {
+    width: auto;
+    display: inline;
+}
+
+.testimonial-slider .owl-nav div {
+    width: 37px;
+    height: 37px;
+    background: #000;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    line-height: 3.6rem;
+    top: 50%;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    left: -6.5rem;
+}
+
+.testimonial-slider .owl-next {
+    left: auto !important;
+    right: -6.5rem !important;
+}
+
+.testimonial-slider .owl-nav div:hover {
+    background-color: #cf7a45;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/*.testimonial-item:hover {
+    border: 2px solid #787878;
+    -webkit-box-shadow: 2px 15px 14px rgba(10, 10, 10, 0.2);
+    box-shadow: 2px 15px 14px rgba(10, 10, 10, 0.2);
+}*/
+.testimonial-slider .owl-item.active:nth-child(2) {
+    border: .2rem solid #787878;
+    -webkit-box-shadow: 2px 15px 14px rgba(10, 10, 10, 0.2);
+    box-shadow: 2px 15px 14px rgba(10, 10, 10, 0.2);
+}
+
+
+/*slick slide*/
+
+
+/*.slick-initialized .slick-slide {
+    display: block;
+    margin-right: 50px;
+}*/
+
+.testimonial-area .slick-slide img {
+    display: inline;
+}
+
+.testimonial-item {
+    margin: 23px;
+    height: auto;
+}
+
+.testimonial-item img {
+    width: 100%;
+}
+
+.testimonial-area button.slick-arrow {
+    width: 37px;
+    height: 37px;
+    background: #000;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    line-height: 3.6rem;
+    top: 50%;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    left: -6.5rem;
+}
+
+.testimonial-slide.pt-50.slick-initialized.slick-slider .slick-arrow:last-child {
+    right: -50px;
+    left: auto;
+}
+
+/*
+.testimonial-slide-center-mode-style{
+       border: 2px solid #787878;
+    -webkit-box-shadow: 2px 15px 14px rgba(10, 10, 10, 0.2);
+    box-shadow: 2px 15px 14px rgba(10, 10, 10, 0.2); 
+}
+*/
+.testimonial-item.text-center.slick-slide.slick-current.slick-active.slick-center {
+    -webkit-box-shadow: 2px 15px 14px rgba(10, 10, 10, 0.2);
+    box-shadow: -3px 7px 14px rgb(10 10 10 / 20%);
+    background: #fff;
+    display: block;
+    border: 2px solid #000!important;
+}
+/*===================================================================================*/
+/*  08. FOOTER CSS START
+/*===================================================================================*/
+
+.footer-widget {
+    overflow: hidden;
+}
+
+.footer-widget-title {
+    margin-bottom: 3.8rem;
+}
+
+.footer-widget-title h3 {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer-widget-title h3::after {
+    content: "";
+    position: absolute;
+    top: 14%;
+    left: 16px;
+    background: #cf7a45;
+    width: 45px;
+    height: 2px;
+    display: block;
+}
+
+.footer-about-area p {
+    color: #f3f2f8;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/*instafeed*/
+.instafeed img {
+    float: left;
+    width: 25.33%;
+    padding: 2px;
+    /* height: 67px; */
+}
+
+/*social icon */
+.social ul li a {
+    color: #fff;
+    font-size: 1.7rem;
+    display: block;
+    border: 1px solid #cf7a45;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 .3rem;
+    line-height: 3.5rem;
+    -webkit-transition: ease 0.3s;
+    transition: ease 0.3s;
+}
+
+.social ul li a:hover {
+    color: rgba(167, 146, 129, 1);
+    border: 1px solid rgba(167, 146, 129, 1);
+}
+
+/*footer explore */
+.footer-explorework-area ul li {
+    display: block;
+    color: #f3f2f8;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.footer-explorework-area ul li a:before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #cf7a45;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.footer-explorework-area ul li a {
+    padding-left: 15px;
+    position: relative;
+    color: #f3f2f8;
+}
+
+/*FOOTER TOUCH CSS*/
+.footer-touch-area ul li a {
+    font-size: 1.6rem;
+    color: #f3f2f8;
+    padding-top: 0.9rem;
+}
+
+.footer-touch-area ul li a i {
+    margin-right: 1rem;
+    color: #cf7a45;
+    font-size: 1.5rem;
+}
+
+.footer-touch-area ul li {
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+/*footer copyright text */
+
+.footer-copyright-text p {
+    color: #f3f2f8;
+    padding: 2rem 0;
+    padding-bottom: 1.2rem;
+}
